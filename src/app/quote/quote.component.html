@@ -1,0 +1,39 @@
+<div class="container-fluid">
+    <h1 class="text-center">MY QUOTES</h1>
+    <hr>
+  
+    <div class="row">
+      <div class="col-md-6">
+        <div *ngFor="let quote of quotes; let i = index">
+  
+          <div id = {{i}} class="header">
+            <h5 *ngIf='quote.upVote !== findMax() || quote.upVote === 0'>{{ quote.detail }}.</h5>
+            <div *ngIf='quote.upVote === findMax() && quote.upVote > 0'>
+                <h5 appHighlight>{{ quote.detail }}</h5>
+            </div>
+          </div>
+  
+          <div class="mb-2">
+            <button type="button" (click)="upVoteQuote(quote)" class="btn d-inline btn-outline-success btn-sm vote"><i
+                class="fa fa-thumbs-up"></i></button> Vote: {{ quote.upVote }}
+  
+            <button type="button" (click)="downVoteQuote(quote)" class="btn btn-outline-danger btn-sm vote"><i
+                class="fa fa-thumbs-down"></i></button> Vote: {{ quote.downVote }}
+          </div>
+  
+  
+          <button type="button" (click)='toggleDetails(i)' class="btn btn-info mr-2">Show More</button>
+          <button type="button" (click)="deleteQuote(i)" class="btn btn-dark"><i class="fa fa-trash"></i></button> <br>
+  
+          <div *ngIf='quote.showDescription'>
+            <app-quote-detail [quote]='quote' (deleteQuote)='deleteQuote($event)' (upVoteQuote)='upVoteQuote($event)'
+              (downVoteQuote)='downVoteQuote($event)'></app-quote-detail>
+          </div>
+          <hr>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <app-quote-form (addQuote)='addNewQuote($event)'></app-quote-form>
+      </div>
+    </div>
+    </div>
