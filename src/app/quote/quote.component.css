@@ -5,3 +5,15 @@ h5 {
   button {
     font-size: 20px;
   }
+  .bg-no-overlay {
+    background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7));
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center center;
+    color: #fff;
+    margin-top:0px ;
+    height: fit-content;
+    padding-bottom: -20px;
+    background-color: slategrey;
+  
+}
