@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.css";
 body {
-  /* background-image: url('./assets/image/creator-bg.jpg'); */
+  background-image: url('src/assets/image/Beautiful_Flying.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
