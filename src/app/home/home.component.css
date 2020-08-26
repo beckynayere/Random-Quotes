@@ -1,8 +1,19 @@
-body {
-    background-image: url('./assets/image/beautiful_Flying.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: auto;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+@import url('https://fonts.googleapis.com/css?family=Cabin+Sketch&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
   }
+  
+  .home {
+
+            
+    background-image: url('src/assets/image/Beautiful_Flying.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  height: auto;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}

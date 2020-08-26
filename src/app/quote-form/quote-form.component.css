@@ -1,4 +1,9 @@
-.form-group {
-    font-size: 20px;
+.form-group{
+    font-size:30px;
     background-color:transparent;
-  }
+}
+h2{
+    font-size:40px;
+    color:rgb(132, 240, 217);
+    font-family:sans-serif;   
+}
